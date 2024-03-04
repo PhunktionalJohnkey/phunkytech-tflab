@@ -1,7 +1,8 @@
 # Create a new load balancer
 resource "aws_elb" "bar" {
-  name               = "foobar-terraform-elb"
-  availability_zones = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
+  name               = var.elb_name 
+  availability_zones = var.az
+  #availability_zones = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
 
   listener {
     instance_port     = 8000
@@ -19,9 +20,9 @@ resource "aws_elb" "bar" {
   }
 
   cross_zone_load_balancing = true
-  idle_timeout = 400
+  idle_timeout = var.timeout
   connection_draining = true
-  connection_draining_timeout = 400
+  connection_draining_timeout = var.timeout
 
   tags = {
     Name = "foobar-terraform-elb"

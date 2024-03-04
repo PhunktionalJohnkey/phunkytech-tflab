@@ -26,4 +26,11 @@ variable "usernumber" {
   type = number
 }
 
+variable "elb_name" {
+  type = string
+  default = "phunkytech-terraform-elb"
+}
 
+variable az {}
+
+variable timeout {}
