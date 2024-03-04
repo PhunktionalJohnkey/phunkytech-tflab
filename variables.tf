@@ -26,7 +26,7 @@ variable "usernumber" {
   type = number
 }
 
-variable "elb_names" {
+variable "ec2_names" {
   type = list
   default = ["dev-server", "stage-server", "prod-server"]
 }
