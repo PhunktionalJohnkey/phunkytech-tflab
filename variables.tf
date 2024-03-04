@@ -38,3 +38,17 @@ variable az {
 variable timeout {
   type = number
 }
+
+variable "list" {
+  type = list
+  default = ["m5.large", "m5.xlarge", "t2.medium"]
+}
+
+variable "types" {
+  type = map
+  default = {
+    eu-west-1 = "t2.micro"
+    eu-west-2 = "t2.nano"
+    eu-west-3 = "t2.small"
+  }
+}
