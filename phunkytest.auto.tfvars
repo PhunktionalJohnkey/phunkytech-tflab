@@ -4,6 +4,6 @@ elb_name = "phunkytech-elb"
 
 timeout = "400"
 
-az = "eu-west-2b"
+az = ["eu-west-2b", "eu-west-2c", "eu-west-2a"]
 
 

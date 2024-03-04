@@ -1,5 +1,5 @@
 # Create a new load balancer
-resource "aws_elb" "bar" {
+resource "aws_elb" "phunkytech-elb" {
   name               = var.elb_name 
   availability_zones = var.az
   #availability_zones = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
