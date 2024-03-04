@@ -5,7 +5,7 @@ resource "aws_instance" "dev" {
   count = var.istest == true ? 3 : 0
 
   tags = {
-    Name = var.ec2_names[count.index]
+    Name = var.ec2_names[count.index],
     #Name = "phunkytechsvr.${count.index}"
   }
 }
@@ -22,4 +22,8 @@ resource "aws_instance" "prod" {
   }
 }
 
-
+resource "aws_ebs_volume" "db_ebs" {
+  availability_zone = "eu-west-2c"
+  size = 8
+  tags = local.common_tags
+}
