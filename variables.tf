@@ -57,3 +57,5 @@ variable "types" {
     eu-west-3 = "t2.small"
   }
 }
+
+variable "istest" {}
