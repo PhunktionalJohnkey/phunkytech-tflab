@@ -26,9 +26,14 @@ variable "usernumber" {
   type = number
 }
 
+variable "elb_names" {
+  type = list
+  default = ["dev-server", "stage-server", "prod-server"]
+}
+
 variable "elb_name" {
   type = string
-  default = "phunkytech-terraform-elb"
+  default = "phunkytech-elb"
 }
 
 variable az {

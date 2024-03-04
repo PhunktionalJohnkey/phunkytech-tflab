@@ -3,6 +3,11 @@ resource "aws_instance" "phunkyec2" {
   instance_type = var.list[4] # using the key value in map to reference instance type
 
   count = 3
+
+  tags = {
+    Name = var.elb_names[count.index]
+    #Name = "phunkytechsvr.${count.index}"
+  }
 }
 
 
