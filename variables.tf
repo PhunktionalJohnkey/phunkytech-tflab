@@ -31,6 +31,10 @@ variable "elb_name" {
   default = "phunkytech-terraform-elb"
 }
 
-variable az {}
+variable az {
+  type = list
+}
 
-variable timeout {}
+variable timeout {
+  type = number
+}
