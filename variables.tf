@@ -41,7 +41,7 @@ variable timeout {
 
 variable "list" {
   type = list
-  default = ["m5.large", "m5.xlarge", "t2.medium"]
+  default = ["m5.large", "m5.xlarge", "t2.medium","t2.nano","t2.micro"]
 }
 
 variable "types" {
